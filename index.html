@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="showquestion(0) , startTime()">
+    <h1 style="color: red; text-shadow: 1px 0px #fff; font-size: 50px;">Quiz App</h1>
+    <div class="card">
+        <div class="card-header">
+            <div class="name">
+               Welcome  <script>document.write(sessionStorage.getItem("name"));</script>
+            </div>
+            <div id="timer">
+               
+            </div>
+        </div>
+        <div class=" card-body">
+            <h4 id="questionelement" class="card-question">Q1 : What is Your Name</h4>
+            <p class="card-option optionelement" onclick="putactiveclass(this)">1. usama</p>
+            <p class="card-option optionelement" onclick="putactiveclass(this)">2. usama</p>
+            <p class="card-option optionelement" onclick="putactiveclass(this)">3. usama</p>
+            <p class="card-option optionelement" onclick="putactiveclass(this)">4. usama</p>
+        </div>
+        <div class="card-footer">
+            <button onclick="nextquestion()">Next Question</button>
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>
